@@ -1,0 +1,10 @@
+{
+    "HOME": {
+      "name": "home",
+      "title": "Welcome home"
+    },
+    "OTHER": {
+      "name": "another one",
+      "title": "This is another section"
+    }
+  }

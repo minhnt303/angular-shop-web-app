@@ -1,0 +1,103 @@
+<!-- <body>
+    <div class="container">
+        <form class="form-register" id="register" [formGroup]="register">
+            <h1 class="form-register-heading">Register form</h1>
+            <div class="control-group">
+                <label class="control-label" for="inputName">Your Name:</label>
+                <div class="controls" type="controls">
+                    <input placeholder="Enter your Name" id="name" name="name" type="name" formControlName="name">
+                   <app-control-messages [control]="register.controls.name" name="Name"></app-control-messages>
+
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputEmail">Your Email:</label>
+                <div class="controls" type="controls">
+                    <input placeholder="Enter your Email" id="email" name="email" type="email" formControlName="email">
+                     <app-control-messages [control]="register.controls.email" name="Email"></app-control-messages>
+                </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputUsername">Username:</label>
+                <div class="controls" type="controls">
+                    <input placeholder="Enter your Username" id="username" name="username" type="username" formControlName="username">
+                    <app-control-messages [control]="register.controls.username" name="User name"></app-control-messages>
+                     </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputPassword">Password:</label>
+                <div class="controls" type="controls">
+                    <input placeholder="Enter Password" id="password" name="password" type="password" formControlName="password">
+                    <app-control-messages [control]="register.controls.password" name="Password"></app-control-messages>
+                    </div>
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="inputConfirmpassword">Confirm Password:</label>
+                <div class="controls" type="controls">
+                    <input placeholder="Confirm your Password" id="confirmpassword" name="confirmpassword" type="password" formControlName="confirmpassword">
+                    <app-control-messages [control]="register.controls.confirmpassword" name="Confirm password"></app-control-messages>
+                    </div>
+            </div>
+            <div class="control-group">
+                <input type="submit" class="btn btn-large btn-primary" name="btnsubmit" (click)="submit()" value="Sign up"> &nbsp;
+                <input type="button" class="btn btn-large btn-primary" name="btnback" (click)="back()" value="Back">
+            </div>
+        </form>
+    </div>
+</body> -->
+
+<body>
+    <div class="container">
+        <form class="form-register" id="register" [formGroup]="register">
+            <p class="form-register-heading">{{ "register" | translate }}</p>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "entername" | translate }}' id="name" name="name" type="name" formControlName="name" required>
+                    <mat-error>
+                        <app-control-messages [control]="register.controls.name" name="Name"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+                <!-- <app-control-messages [control]="register.controls.name" name="Name"></app-control-messages> -->
+            </div>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enteremail" | translate }}' id="email" name="email" type="email" formControlName="email" required>
+                    <mat-error>
+                        <app-control-messages [control]="register.controls.email" name="Email"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enterusername" | translate }}' id="username" name="username" type="username" formControlName="username"
+                        required>
+                    <mat-error>
+                        <app-control-messages [control]="register.controls.username" name="User name"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enterpassword" | translate }}' id="password" name="password" type="password" formControlName="password" required>
+                    <mat-error>
+                        <app-control-messages [control]="register.controls.password" name="Password"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enterconfirmpassword" | translate }}' id="confirmpassword" name="confirmpassword" type="password" formControlName="confirmpassword"
+                        required>
+                    <mat-error>
+                        <app-control-messages [control]="register.controls.confirmpassword" name="Confirm password"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            &nbsp;
+            <div class="control-group">
+                <input type="submit" class="btn btn-large btn-primary" name="btnsubmit" (click)="submit()" value='{{ "signupbutton" | translate }}'>                &nbsp;
+                <input type="button" class="btn btn-large btn-primary" name="btnback" (click)="back()" value='{{ "backbutton" | translate }}'>
+            </div>
+        </form>
+    </div>
+</body>

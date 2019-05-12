@@ -1,0 +1,221 @@
+<mat-grid-list cols="8" rowHeight="360px">
+
+	<mat-grid-tile [colspan]="5" [rowspan]="1">
+		<ngb-carousel>
+			<ng-template ngbSlide>
+				<img src="https://manager.remaxvietnam.vn/asset/images/SanPham/phukiendienthoai/tainghe/tai-nghe-rb-s18/slide/tai-nghe-bluetooth-the-thao-remax-rb-s18-slide1-18062018163823.jpg"
+				 alt="Random first slide" class="imageslide">
+				<div class="carousel-caption">
+					<h3>First slide label</h3>
+				</div>
+				<!-- <button mat-button class="btn btn-warning"><img src="assets/image/unfavorite.png">Favorite</button> -->
+			</ng-template>
+			<ng-template ngbSlide>
+				<img src="https://manager.remaxvietnam.vn/asset/images/SanPham/phukiendienthoai/tainghe/tai-nghe-rb-s18/slide/tai-nghe-bluetooth-the-thao-remax-rb-s18-slide2-18062018163825.jpg"
+				 alt="Random second slide" class="imageslide">
+				<div class="carousel-caption">
+					<h3>Second slide label</h3>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<img src="https://manager.remaxvietnam.vn/asset/images/SanPham/phukiendienthoai/tainghe/tai-nghe-rb-s18/slide/tai-nghe-bluetooth-the-thao-remax-rb-s18-slide5-18062018163830.jpg"
+				 alt="Random third slide" class="imageslide">
+				<div class="carousel-caption">
+					<h3>Third slide label</h3>
+				</div>
+			</ng-template>
+			<ng-template ngbSlide>
+				<img src="https://manager.remaxvietnam.vn/asset/images/SanPham/phukiendienthoai/tainghe/tai-nghe-rb-s18/slide/tai-nghe-bluetooth-the-thao-remax-rb-s18-slide6-18062018163832.jpg"
+				 alt="Random four slide" class="imageslide">
+				<div class="carousel-caption">
+					<h3>Four slide label</h3>
+				</div>
+			</ng-template>
+		</ngb-carousel>
+	</mat-grid-tile>
+
+	<mat-grid-tile [colspan]="3" [rowspan]="1" *ngFor="let name of ids" class="details">
+		<mat-card class="example-card">
+			<mat-card-header>
+				<mat-card-title>
+					<h1 class="namedetails"><b>{{name.Name}}</b></h1>
+				</mat-card-title>
+			</mat-card-header>
+			<mat-card-content>
+				<div class="price">
+					<span class="sale">
+						<h4><b>{{name.Price}} $</b><img src="assets/image/hot-item.png"><img src="assets/image/discount.png"></h4>
+					</span>
+				</div>
+				<div class="guarantee">
+					<p><img src="assets/image/check.png"><strong> Guarantee:</strong> 12 month, error 1 change 1</p>
+					<p><img src="assets/image/check.png"><strong> Contact:</strong> 0988.66.9798 (free of charge calls)</p>
+				</div>
+			</mat-card-content>
+			<mat-card-content>
+				<label>Số lượng</label>
+				<p>
+					<select id="optSoLuong" class="form-control">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</p>
+				<div id="addcart" class="input-group">
+					<button class="btn btn-warning"><img src="assets/image/cart.png"><b> Add to cart</b></button>
+				</div>
+			</mat-card-content>
+			<mat-card-content>
+				<!-- <fb-like href="https://github.com/zyra/ngx-facebook"></fb-like> -->
+				<google-plus url={{url}}></google-plus>
+				<tweet url={{url}} text={{text}}></tweet>
+			</mat-card-content>
+		</mat-card>
+	</mat-grid-tile>
+
+	<mat-grid-tile [colspan]="6" [rowspan]="3" *ngFor="let name of ids">
+		<mat-card class="detail-card">
+			<ngb-tabset>
+				<ngb-tab title="Video">
+					<ng-template ngbTabContent>
+						<b>
+							<h3 style="color:lightgreen; text-align: center">Product introduction video</h3>
+						</b>
+						<div style="text-align: center">
+							Experience a new level of music listening and conversation with the Remax TWS-1 headset with Bluetooth 4.2
+							technology.
+						</div>
+						<div style="text-align: center"><b>................. o0o .................</b></div>
+						<mat-card>
+							<iframe class="video" src="https://www.youtube.com/embed/vaCs9hZB31Y" frameborder="0" allowfullscreen></iframe>
+						</mat-card>
+					</ng-template>
+				</ngb-tab>
+				<ngb-tab>
+					<ng-template ngbTabTitle><b>Details</b></ng-template>
+					<ng-template ngbTabContent>
+						<b>
+							<h3 style="color:lightgreen; text-align: center">Product introduction</h3>
+						</b>
+						<div style="text-align: center"><b>{{name.Details}}</b></div>
+						<div class="text-center">
+							<img src="https://manager.remaxvietnam.vn/asset/images/SanPham/phukiendienthoai/tainghe/tai-nghe-tws-1/baiviet2/1-bo-2-tai-nghe-bluetooth-remax-tws-1-14082018093149.jpg">
+						</div>
+						<div style="text-align: center"></div>
+					</ng-template>
+				</ngb-tab>
+				<ngb-tab title="Specifications">
+					<ng-template ngbTabContent>
+						Specifications
+						<table>
+							<tbody>
+								<tr>
+									<td><strong>Product name:</strong></td>
+									<td>1 set of 2 Remax TWS-1 Bluetooth headset&nbsp;</td>
+								</tr>
+								<tr>
+									<td><strong>Model:</strong></td>
+									<td>TWS-1</td>
+								</tr>
+								<tr>
+									<td><strong>The firm:</strong></td>
+									<td>Remax</td>
+								</tr>
+								<tr>
+									<td><strong>Bluetooth connection:</strong></td>
+									<td>4.2</td>
+								</tr>
+								<tr>
+									<td><strong>Connection distance:</strong></td>
+									<td>10m</td>
+								</tr>
+								<tr>
+									<td><strong>Color:</strong></td>
+									<td>Black/ Yellow</td>
+								</tr>
+							</tbody>
+						</table>
+					</ng-template>
+				</ngb-tab>
+				<ngb-tab title="Comment">
+					<ng-template ngbTabContent>
+						<mat-card>1111
+						</mat-card>
+					</ng-template>
+				</ngb-tab>
+				<ngb-tab title="Other product">
+					<ng-template ngbTabContent>
+						<ngb-carousel>
+							<ng-template ngbSlide>
+								<img src="assets/image/image1.jpg" alt="Random first slide" class="imageslide">
+								<div class="carousel-caption">
+									<mat-card-title *ngFor="let product of ids">{{ product.Name }}</mat-card-title>
+								</div>
+								<!-- <button mat-button class="btn btn-warning"><img src="assets/image/unfavorite.png">Favorite</button> -->
+							</ng-template>
+							<ng-template ngbSlide>
+								<mat-grid-list [cols]="4" rowHeight="1:1" class="shoplist">
+									<mat-grid-tile *ngFor="let product of pagedItems" class="shop">
+										<mat-card class="example-card">
+											<mat-card-header>
+												<div mat-card-avatar class="example-header-image"></div>
+												<mat-card-title>{{ product.Name }}</mat-card-title>
+												<mat-card-subtitle>$ {{ product.Price }}</mat-card-subtitle>
+											</mat-card-header>
+											<img mat-card-image src="https://i.dell.com/sites/imagecontent/consumer/merchandizing/en/PublishingImages/Franchise-category/xpslt/cs1601g0012_xps_13_9365_2in1_pdp_module4.jpg"
+											 alt="Photo of a Shiba Inu" class="itemimage">
+											<mat-card-actions>
+												<button mat-button class="btn btn-warning"><img src="assets/image/unfavorite.png">Favorite</button>
+												<button mat-button class="btn btn-warning" (click)="detail(product.Id)"><img src="assets/image/loupe.png">Detail</button>
+												<button mat-button class="btn btn-warning"><img src="assets/image/shopping-bag.png"> Add to cart</button>
+											</mat-card-actions>
+										</mat-card>
+									</mat-grid-tile>
+								</mat-grid-list>
+							</ng-template>
+						</ngb-carousel>
+					</ng-template>
+				</ngb-tab>
+			</ngb-tabset>
+		</mat-card>
+	</mat-grid-tile>
+
+	<mat-grid-tile [colspan]="2" [rowspan]="3">
+		<mat-card class="sideright">
+			<mat-card-header>
+				<ul>
+					<li>
+						<a href="/chinh-sach-giao-hang.html">
+							<img src="assets/side/car.png">
+							<b>Giao hàng toàn quốc</b>
+						</a>
+					</li>
+					<li>
+						<a href="/chinh-sach-giao-hang.html">
+							<img src="assets/side/shoppingcart.png">
+							<b>Miễn phí vận chuyển với tổng hóa đơn trên 800.000 Vnđ</b>
+						</a>
+					</li>
+					<li>
+						<a href="/chinh-sach-bao-hanh.html">
+							<img src="assets/side/circle.png">
+							<b>Chính sách bảo hành 1 năm với hầu hết các mặt hàng</b>
+						</a>
+					</li>
+					<li>
+						<a href="/trung-tam-ho-tro-khach-hang.html">
+							<img src="assets/side/check.png">
+							<b>Tư vấn sản phẩm dịch vụ: <br>08.00-22.00 hàng ngày</b>
+						</a>
+					</li>
+
+				</ul>
+				<div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
+				 data-numposts="5"></div>
+			</mat-card-header>
+		</mat-card>
+	</mat-grid-tile>
+
+</mat-grid-list>

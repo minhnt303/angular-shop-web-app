@@ -1,0 +1,52 @@
+<div class="mat-dialog">
+    <div mat-dialog-actions>
+        <button mat-button class="btn btn-danger" [mat-dialog-close]="data">X</button>
+    </div>
+    <!-- <h1 i18n="User welcome|An introduction header for this sample">Hello {{data.Name}}</h1> -->
+    <h1 mat-dialog-title>{{ "hi" | translate }} {{data.Name}}</h1>
+    <p>{{ "comment" | translate }}</p>
+    <!-- <mat-form-field>
+    <input matInput placeholder="Enter your new Email" type="Email" [(ngModel)]="data.Email" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter your new Username" type="Username" [(ngModel)]="data.Username"required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter your new Password" type="Password" [(ngModel)]="data.Password" type="password"required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Enter your new Confirmpassword" type="Confirmpassword" [(ngModel)]="data.Confirmpassword" type="password"required>
+  </mat-form-field> -->
+    <form class="form-dialogs" id="dialogs" [formGroup]="dialogs">
+        <mat-form-field class="controls" type="controls">
+            <input matInput placeholder='{{ "enteremail" | translate }}' id="Email" name="Email" type="Email" formControlName="Email" required>
+            <mat-error>
+                <app-control-messages [control]="dialogs.controls.Email" name="Email"></app-control-messages>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="controls" type="controls">
+            <input matInput placeholder='{{ "enterusername" | translate }}' id="Username" name="Username" type="Username" formControlName="Username"
+                required>
+            <mat-error>
+                <app-control-messages [control]="dialogs.controls.Username" name="Username"></app-control-messages>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="controls" type="controls">
+            <input matInput placeholder='{{ "enterpassword" | translate }}' id="Password" name="Password" type="Password" formControlName="Password"
+                required>
+            <mat-error>
+                <app-control-messages [control]="dialogs.controls.Password" name="Password"></app-control-messages>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field class="controls" type="controls">
+            <input matInput placeholder='{{ "enterconfirmpassword" | translate }}' id="Confirmpassword" name="Confirmpassword" type="Confirmpassword"
+                formControlName="Confirmpassword" required>
+            <mat-error>
+                <app-control-messages [control]="dialogs.controls.Confirmpassword" name="Confirmpassword"></app-control-messages>
+            </mat-error>
+        </mat-form-field>
+    </form>
+    <div mat-dialog-actions>
+        <button mat-button class="btn btn-large btn-primary" (click)="onNoClick()" cdkFocusInitial>{{ "updatebutton" | translate }}</button>
+    </div>
+</div>

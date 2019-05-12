@@ -1,0 +1,44 @@
+<mat-toolbar class="example-header">
+  <mat-sidenav-container class="example-container">
+    <button mat-button (click)="sidenav.toggle()" class="menu"><mat-icon class="menu-icon">menu</mat-icon></button>
+  </mat-sidenav-container>
+  <nav class="navbar">
+
+    <!-- logo -->
+    <div class="navbar-brand" (click)="home()">
+      <a class="navbar-item">
+        <img src="assets/img/karma.png">
+      </a>
+    </div>
+  </nav>
+  <div class="loginregister">
+      <button class="btn btn-large btn-success" (click)="login()">{{ "singinbutton" | translate }}</button>             &nbsp;
+      <button class="btn btn-large btn-success" (click)="register()">{{ "registerbutton" | translate }}</button>&nbsp;
+  </div>
+</mat-toolbar>
+
+<mat-sidenav #sidenav [mode]="mode.over">
+  <p><button mat-button (click)="sidenav.toggle()" class="close"><mat-icon>close</mat-icon></button></p>
+  <p>
+    <mat-radio-group class="example-radio-group" [formControl]="mode">
+      <label>FEATURES</label><br>
+        <label class="option" (click)="home()"><mat-icon (click)="home()">home</mat-icon> HOME</label> <br>
+        <label class="option"(click)="home()"><mat-icon (click)="home()"> local_grocery_store</mat-icon> PRODUCTS</label> <br>
+        <label class="option"><mat-icon>add_shopping_cart</mat-icon> YOUR BAG</label> <br>
+        <label class="option"><mat-icon>account_balance_wallet</mat-icon> PURCHASE</label> <br>
+        <label class="option"><img src="assets/image/favorite.png"> FAVORITE</label> <br>
+      <label>CONTACT</label> <br>
+        <label class="option"><mat-icon>phone</mat-icon> USER CASE</label> <br>
+        <label class="option"(click)="gmail()"><img src="assets/img/gmail.png"> GMAIL</label> <br>
+        <label class="option"(click)="git()"><img src="assets/img/github-logo.png"> GIT</label> <br>
+      <label>LANGUAGE</label> <br>
+      <footer>
+        <label class="language" (click)="changeLanguage('en')"><img src="assets/img/united-kingdom.png" class="language">EN</label> <br>
+        <label class="language" (click)="changeLanguage('de')"><img src="assets/img/germany.png" class="language">DE</label>
+      </footer>
+    </mat-radio-group>
+  </p>
+</mat-sidenav>
+<router-outlet></router-outlet>
+<mat-toolbar class="example-header"></mat-toolbar>
+<!-- <body background="assets/image/back.jpg"><router-outlet></router-outlet></body> -->

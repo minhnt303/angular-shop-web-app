@@ -1,0 +1,47 @@
+<body>
+  <div class="container">
+      <form class="form-edit" id="edit" [formGroup]="edit">
+          <h1 class="form-edit-heading">Edit form</h1>
+          <div class="control-group">
+              <label class="control-label" for="inputnewName">Your New Name:</label>
+              <div class="controls" type="controls">
+                  <input placeholder="Enter your new Name" id="newName" name="newName" type="newName" formControlName="newName">
+                 <app-control-messages [control]="edit.controls.newName" name="new Name"></app-control-messages>
+
+              </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label" for="inputnewEmail">Your New Email:</label>
+              <div class="controls" type="controls">
+                  <input placeholder="Enter your new Email" id="newEmail" name="newEmail" type="newEmail" formControlName="newEmail">
+                   <app-control-messages [control]="edit.controls.newEmail" name="new Email"></app-control-messages>
+              </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label" for="inputnewUsername">New Username:</label>
+              <div class="controls" type="controls">
+                  <input placeholder="Enter your newUsername" id="newUsername" name="newUsername" type="newUsername" formControlName="newUsername">
+                  <app-control-messages [control]="edit.controls.newUsername" name="new User name"></app-control-messages>
+                   </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label" for="inputnewPassword">New Password:</label>
+              <div class="controls" type="controls">
+                  <input placeholder="Enter new Password" id="newPassword" name="newPassword" type="newPassword" formControlName="newPassword">
+                  <app-control-messages [control]="edit.controls.newPassword" name="new Password"></app-control-messages>
+                  </div>
+          </div>
+          <div class="control-group">
+              <label class="control-label" for="inputConfirmpassword">Confirm new Password:</label>
+              <div class="controls" type="controls">
+                  <input placeholder="Confirm new Password" id="rePassword" name="rePassword" type="rePassword" formControlName="rePassword">
+                  <app-control-messages [control]="edit.controls.rePassword" name="new Confirm password"></app-control-messages>
+                  </div>
+          </div>
+          <div class="control-group">
+              <input type="submit" class="btn btn-large btn-primary" name="btnsubmit" (click)="change()" value="Change"> &nbsp;
+              <input type="button" class="btn btn-large btn-primary" name="btnback" (click)="back()" value="Back">
+          </div>
+      </form>
+  </div>
+</body>

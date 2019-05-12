@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <form class="form-signin" id="login" [formGroup]="login">
+            <p class="form-signin-heading">{{ "signin" | translate }}</p>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enterusername/email" | translate }}' id="username" name="username" type="username" formControlName="username"
+                        required>
+                    <mat-error>
+                        <app-control-messages [control]="login.controls.username" name="User name"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="control-group">
+                <mat-form-field class="controls" type="controls">
+                    <input matInput placeholder='{{ "enterpassword" | translate }}' id="password" name="password" type="password" formControlName="password"
+                        required>
+                    <mat-error>
+                        <app-control-messages [control]="login.controls.password" name="Pass word"></app-control-messages>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            &nbsp;
+            <div class="control-group">
+                <input type="submit" class="btn btn-large btn-primary" name="btnsubmit" (click)="submit()" [disabled]="!login.valid" value='{{ "singinbutton" | translate }}'>                &nbsp;
+                <input type="button" class="btn btn-large btn-primary" (click)="register()" value='{{ "registerbutton" | translate }}'>
+            </div>
+        </form>
+    </div>
+</body>

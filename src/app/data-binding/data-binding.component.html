@@ -1,0 +1,61 @@
+<!-- <div *ngFor = 'let data of Data'>{{data.name + data.pass}}</div>
+<div *ngFor = 'let data of Data'>
+  <table border="0.5" width="150" height="50">
+    <tr>
+    <td bgcolor="yellow">{{data.name}} </td>
+    <td>{{data.pass}}</td>
+    </tr>
+  </table>
+</div> -->
+
+
+<div class="matatable">
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
+  <table mat-table class="mat-table"[dataSource]="dataSource" matSort >
+
+      <!-- <ng-container matColumnDef="select">
+          <th mat-header-cell *matHeaderCellDef>
+            <mat-checkbox (change)="$event ? masterToggle() : null"
+                          [checked]="selection.hasValue() && isAllSelected()"
+                          [indeterminate]="selection.hasValue() && !isAllSelected()">
+            </mat-checkbox>
+          </th>
+          <td mat-cell *matCellDef="let row">
+            <mat-checkbox (click)="$event.stopPropagation()"
+                          (change)="$event ? selection.toggle(row) : null"
+                          [checked]="selection.isSelected(row)">
+            </mat-checkbox>
+          </td>
+        </ng-container> -->
+
+    <ng-container matColumnDef="Name">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+      <td mat-cell *matCellDef="let User">
+         <mat-checkbox>{{User.Name}} </mat-checkbox>
+        </td>
+    </ng-container>
+    <ng-container matColumnDef="Email">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Email </th>
+      <td mat-cell *matCellDef="let User"> {{User.Email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Username">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Username </th>
+      <td mat-cell *matCellDef="let User"> {{User.Username}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Password">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Password </th>
+      <td mat-cell *matCellDef="let User"> {{User.Password}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onRowClicked(row)"></tr>
+  </table>
+    <mat-paginator 
+      [pageSizeOptions]="[5,10,15]"
+      showFirstLastButtons
+    ></mat-paginator>
+    <button class="btn btn-large btn-primary" (click)="logout()">Log out</button>
+    &nbsp;
+    <button class="btn btn-large btn-primary" (click)="register()">Register</button>
+</div>

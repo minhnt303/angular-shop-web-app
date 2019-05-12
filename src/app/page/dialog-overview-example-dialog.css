@@ -1,0 +1,28 @@
+.mat-form-field {
+    width: 500px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+  }
+  button{
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+.btn-danger{
+  margin-left: 470px;
+}
+::ng-deep.mat-dialog-container{
+  padding-top: 1px;
+  padding-bottom: 1px;
+  height: 600px;
+}
+.mat-dialog-actions{
+  padding-top:5px;
+}
+::ng-deep.cdk-overlay-pane{
+  max-height: 470px;
+  /* height:1px; */
+}
+element.style{
+  height: 600px;
+}
+
+

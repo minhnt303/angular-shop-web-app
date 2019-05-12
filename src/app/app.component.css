@@ -1,0 +1,62 @@
+button{
+    padding-left:10px;
+}
+.example-header{
+    background-color: cadetblue;
+    background-size: 1px;
+}
+mat-sidenav-container{
+    background-color: cadetblue;
+}
+mat-sidenav{
+    padding-top:10px;
+    padding-right: 6px;
+    padding-left : 6px;
+}
+.option{
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+
+/* mat-toolbar{
+    padding: 0px;
+} */
+button.menu{
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05); */
+}
+button.close{
+    padding-left: 0px;
+}
+
+img.language{
+    padding-right:10px;
+}
+label.language{
+    display: inline-flex;
+    vertical-align: middle;
+    padding-right: 10px;
+}
+mat-toolbar .loginregister{
+    float:right;
+    position: relative;
+}
+mat-toolbar.mat-toolbar-single-row{
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+            border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+        -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+            box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
